@@ -1,4 +1,9 @@
 * {
+  ---text_primary_color:rgb(47, 72, 88);
+  ---text_secondary_color:rgb(91, 146, 121);
+  ---text_third_color:rgb(149, 94, 66); 
+  ---background:rgba(187, 194, 226,0.1); 
+  ---secondary_background_color:rgba(91, 146, 121,0.8);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,12 +11,12 @@
 
 section {
   height: 100vh;
-  background-color: rgb(39, 41, 68);
+  background-color: var(---background);
   font-family: sans-serif;
 }
 
 .score {
-  color: rgb(224, 224, 224);
+  color: var(---text_secondary_color);
   height: 20vh;
   display: flex;
   justify-content: space-around;
@@ -21,13 +26,14 @@ section {
   font-size: 30px;
 }
 .score p {
+  color: var(---text_third_color);
   text-align: center;
   padding: 10px;
   font-size: 25px;
 }
 
 .intro {
-  color: rgb(224, 224, 224);
+  color: var(---text_primary_color);
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -45,9 +51,9 @@ section {
   height: 50px;
   background: none;
   border: none;
-  color: rgb(224, 224, 224);
+  color: var(---text_primary_color);
   font-size: 20px;
-  background: rgb(45, 117, 96);
+  background: var(---secondary_background_color);
   border-radius: 3px;
   cursor: pointer;
 }
@@ -60,7 +66,7 @@ section {
   transition: opacity 0.5s ease 0.5s;
 }
 .winner {
-  color: rgb(224, 224, 224);
+  color: var(---text_primary_color);
   text-align: center;
   font-size: 50px;
 }
@@ -138,7 +144,7 @@ div.fadeIn {
   75% {
     transform: translateY(0px);
   }
-  85% {
+  80% {
     transform: translateY(-50px);
   }
   100% {
